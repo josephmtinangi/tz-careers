@@ -10,6 +10,29 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
+			<h2>Jobs</h2>
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @company.jobs.each do |job| %>
+							<tr>
+								<td><%= job.title %></td>
+								<td><%= job.description %></td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
 			<h2>New job</h2>
 			<%= form_for([@company, @company.jobs.build]) do |f| %>
 				<div class="form-group">
