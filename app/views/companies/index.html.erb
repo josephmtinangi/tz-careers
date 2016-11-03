@@ -11,7 +11,7 @@
 						<tr>
 							<th>Name</th>
 							<th>Website</th>
-							<th class="text-center" colspan="2"><i class="fa fa-cog"></i></th>
+							<th class="text-center" colspan="3"><i class="fa fa-cog"></i></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -21,6 +21,9 @@
 								<td><%= company.website %></td>
 								<td><%= link_to 'Show', company_path(company) %></td>
 								<td><%= link_to 'Edit', edit_company_path(company) %></td>
+								<td>
+									<%= link_to 'Destroy', company_path(company), method: :delete, data: { confirm: 'Are you sure?' } %>
+								</td>
 							</tr>
 						<% end %>
 					</tbody>
