@@ -3,6 +3,9 @@ class CompaniesController < ApplicationController
 	end
 
 	def create
-		render plain: params[:company].inspect
+		@company = Company.new(params[:company])
+
+		@company.save
+		redirect_to @company
 	end
 end
