@@ -11,7 +11,7 @@
 						<tr>
 							<th>Name</th>
 							<th>Website</th>
-							<th>&nbsp;</th>
+							<th class="text-center" colspan="2"><i class="fa fa-cog"></i></th>
 						</tr>
 					</thead>
 					<tbody>
@@ -20,6 +20,7 @@
 								<td><%= company.name %></td>
 								<td><%= company.website %></td>
 								<td><%= link_to 'Show', company_path(company) %></td>
+								<td><%= link_to 'Edit', edit_company_path(company) %></td>
 							</tr>
 						<% end %>
 					</tbody>
